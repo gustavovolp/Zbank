@@ -1,0 +1,25 @@
+'use client';
+import { Transacao } from "../types/transacao";
+
+interface SaldoContaProps {
+    transaçoes: Transacao[];
+}
+
+export const SaldoConta = ({ transaçoes }: SaldoContaProps) => {
+    
+    const saldo = transaçoes.reduce((acc, transacao) => {
+        if (transacao.tipo === 'deposito') {
+            return acc + transacao.valor;
+        } else {
+            return acc - transacao.valor;
+        }
+    }, 0);
+    return(
+        <div className="px-4 py-4 bg-(--color-primary) text-left rounded-lg mb-4 justify-center items-center self-center[#ffffff] shadow-lg font-orbitron">
+            <h1 className="text-[1rem]">Saldo da Conta</h1>
+            <h2 className="text-[1.5rem] font-bold">{saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
+        </div>
+    )
+}
+
+
