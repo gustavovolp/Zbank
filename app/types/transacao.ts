@@ -1,7 +1,7 @@
 export type TransactionTypes = 'deposito' | 'tranferencia';
 
 export interface Transacao {
-    id: number;
+    id: string;
     valor: number;
     tipo: TransactionTypes;
     data: string;

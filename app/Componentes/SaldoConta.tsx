@@ -13,11 +13,11 @@ export const SaldoConta = ({ transaçoes }: SaldoContaProps) => {
         } else {
             return acc - transacao.valor;
         }
-    }, 0);
+    }, 5000);
     return(
-        <div className="px-4 py-4 bg-(--color-primary) text-left rounded-lg mb-4 justify-center items-center self-center[#ffffff] shadow-lg font-orbitron">
-            <h1 className="text-[1rem]">Saldo da Conta</h1>
-            <h2 className="text-[1.5rem] font-bold">{saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
+        <div className="px-4 py-4 bg-(--color-primary) text-left rounded-lg mb-4 justify-center items-center self-center[#ffffff] shadow-lg ">
+            <h1 className="text-[1rem] font-orbitron">Saldo da Conta</h1>
+            <h2 className="text-[1.5rem] font-medium">{saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
         </div>
     )
 }

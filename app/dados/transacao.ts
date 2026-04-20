@@ -36,6 +36,6 @@ export const Transacos: Transacao[] = [
     data: '2026-03-23',
     valor: 150,
     descricao: 'Freelance de design',
-    tipo: 'deposito'
+    tipo: 'tranferencia'
 }
 ]

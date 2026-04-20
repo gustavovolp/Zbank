@@ -7,7 +7,7 @@ interface AdicionarTransacaoProps {
 }
 
 const TransacaoInicial: Transacao = {
-    id: 5,
+    id: 6,
     data: new Date().toString().split('T')[0],
     valor: 0,
     descricao: '',
@@ -28,8 +28,7 @@ export const AdicionarTransacao = ({ onAdicionar }: AdicionarTransacaoProps) => 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value, type } = e.target;
         setTransacao(prev => ({
-            ...prev,
-            [name]: type === 'number' ? parseFloat(value) : value
+            ...prev, [name]: type === 'number' ? parseFloat(value) : value
         }));
     }
     return(
