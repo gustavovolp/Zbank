@@ -6,8 +6,7 @@ import { Transacos } from "./dados/transacao";
 
 export default function Home() {
   return (
-    <div className='bg-[--background] text-[#FFFFFF]'>
-      <Header />
+    <div >
       <div className="flex container mx-auto">
         <Navegation />
       <div className="container mx-auto items-center justify-center self-center">
@@ -16,7 +15,6 @@ export default function Home() {
       </main>
     </div>
     </div>
-    <Footer />
     </div>
   );
 }
