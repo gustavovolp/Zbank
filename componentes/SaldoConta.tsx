@@ -1,17 +1,17 @@
 'use client';
-import { Transacao } from "../types/transacao";
+import { Transaction } from "@/types/transation"
 
 interface SaldoContaProps {
-    transaçoes: Transacao[];
+    transactions: Transaction[];
 }
 
-export const SaldoConta = ({ transaçoes }: SaldoContaProps) => {
+export const SaldoConta = ({ transactions }: SaldoContaProps) => {
     
-    const saldo = transaçoes.reduce((acc, transacao) => {
-        if (transacao.tipo === 'deposito') {
-            return acc + transacao.valor;
+    const saldo = transactions.reduce((acc, transaction) => {
+        if (transaction.tipo === 'deposito') {
+            return acc + transaction.valor;
         } else {
-            return acc - transacao.valor;
+            return acc - transaction.valor;
         }
     }, 5000);
     return(

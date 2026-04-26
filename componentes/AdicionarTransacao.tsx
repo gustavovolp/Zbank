@@ -1,5 +1,5 @@
 'use client'
-import { Transacao } from "../types/transacao";
+import { Transacao } from "../types/transation";
 import { ChangeEvent, useState } from "react";
 
 interface AdicionarTransacaoProps {

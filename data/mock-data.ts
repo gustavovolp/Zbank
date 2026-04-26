@@ -1,6 +1,6 @@
-import { Transacao } from "../types/transacao";
+import { Transaction } from "@/types/transation"
 
-export const Transacos: Transacao[] = [
+export const MockTransation: Transaction[] = [
 {   
     id: 0,
     data: '2026-03-18',

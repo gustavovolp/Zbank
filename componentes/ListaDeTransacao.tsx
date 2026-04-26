@@ -1,11 +1,11 @@
-import { Transacao } from "../types/transacao";
-import { BotaoEditar } from "./BotaoEditar";
-import { BotaoExcluir } from "./BotaoExcluir";
+import { Transaction } from "@/types/transation"
+import { BotaoEditar } from '@/componentes/BotaoEditar';
+import { BotaoExcluir } from "@/componentes/BotaoExcluir";
 
 interface listaDeTransacaoProps {
-    transacoes: Transacao[];
-    onDelete: (id: Transacao['id']) => void;
-    onChange: (transacao: Transacao) => void;
+    transacoes: Transaction[];
+    onDelete: (id: Transaction['id']) => void;
+    onChange: (transacao: Transaction) => void;
 }
 
 export const ListaDeTransacao = ({ transacoes, onDelete, onChange }: listaDeTransacaoProps) => {

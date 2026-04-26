@@ -1,17 +1,17 @@
 'use client';
 import { useState, useEffect } from "react";
-import { Transacao } from "../types/transacao";
+import { Transaction } from "@/types/transation";
 
 interface ModalEditarProps {
-    transacao: Transacao | null;
+    transacao: Transaction | null;
     onClose: () => void;
-    onSalvar: (transacaoAtualizada: Transacao) => void;
+    onSalvar: (transacaoAtualizada: Transaction) => void;
 }
 
 export const ModalEditar = ({ transacao, onClose, onSalvar }: ModalEditarProps) => {
     const [descricao, setDescricao] = useState('');
     const [valor, setValor] = useState('');
-    const [tipo, setTipo] = useState<Transacao['tipo']>('deposito');
+    const [tipo, setTipo] = useState<Transaction['tipo']>('deposito');
 
     
     useEffect(() => {
@@ -60,7 +60,7 @@ export const ModalEditar = ({ transacao, onClose, onSalvar }: ModalEditarProps) 
                     <label className="text-sm text-left font-medium text-zinc-600 dark:text-zinc-300">Tipo</label>
                     <select
                         value={tipo}
-                        onChange={(e) => setTipo(e.target.value as Transacao['tipo'])}
+                        onChange={(e) => setTipo(e.target.value as Transaction['tipo'])}
                         className="border border-zinc-300 dark:border-zinc-600 rounded-lg px-3 py-2 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     >
                         <option value="deposito">Depósito</option>

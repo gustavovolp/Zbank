@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from '../assets/logo_zbank.png'
+import Logo from '@/assets/logo_zbank.png'
 
 export const Header = () => {
   return (
