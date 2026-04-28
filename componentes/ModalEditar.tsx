@@ -98,13 +98,13 @@ export const ModalEditar = ({ transacao, onClose, onSalvar }: ModalEditarProps) 
                 <div className="flex gap-3 justify-end mt-2">
                     <button
                         onClick={onClose}
-                        className="px-4 py-2 rounded-lg text-sm font-medium border border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                        className="cursor-pointer px-4 py-2 rounded-lg text-sm font-medium border border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
                     >
                         Cancelar
                     </button>
                     <button
                         onClick={handleSalvar}
-                        className="px-4 py-2 rounded-lg text-sm font-bold bg-primary text-white hover:opacity-90 transition-opacity"
+                        className="cursor-pointer px-4 py-2 rounded-lg text-sm font-bold bg-primary text-white hover:opacity-90 transition-opacity"
                     >
                         Salvar
                     </button>

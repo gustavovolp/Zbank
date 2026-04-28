@@ -14,7 +14,7 @@ interface MovimentacaoBancariaProps {
 
 
 export const MovimentacaoBancaria = ({ transations }: MovimentacaoBancariaProps) => {
-    const [transation, setTransation] = useState(transations);
+    const [transation, setTransation] = useState<Transaction[]>(transations ?? []);
     const [transacaoEditando, setTransacaoEditando] = useState<Transaction | null>(null);
     
 
@@ -39,7 +39,7 @@ export const MovimentacaoBancaria = ({ transations }: MovimentacaoBancariaProps)
             <div className="m-4">
                 <SaldoConta transactions={transation} />
                 <div>
-                    <ListaDeTransacao transacoes={transation} onDelete={(id) => (handleDelete(id))} 
+                    <ListaDeTransacao transaction={transation} onDelete={(id) => (handleDelete(id))} 
                     onChange={(transacao) => handleChange(transacao)}
                     />
                 </div>
