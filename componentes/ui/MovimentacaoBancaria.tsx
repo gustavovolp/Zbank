@@ -1,10 +1,11 @@
 'use client';
-import { ListaDeTransacao } from "@/componentes/ListaDeTransacao";
-import { AdicionarTransacao } from "@/componentes/AdicionarTransacao";
+import { ListaDeTransacao } from "@/componentes/ui/ListaDeTransacao";
+import { FormNewTransaction } from "@/componentes/form/FormNewTransaction";
 import { useState } from "react";
-import { SaldoConta } from "@/componentes/SaldoConta";
+import { SaldoConta } from "@/componentes/ui/SaldoConta";
 import { Transaction } from "@/types/transation"
-import { ModalEditar } from '@/componentes/ModalEditar';
+import { ModalEditar } from '@/componentes/modal/ModalEditar';
+
 
 
 
@@ -43,12 +44,17 @@ export const MovimentacaoBancaria = ({ transations }: MovimentacaoBancariaProps)
                     onChange={(transacao) => handleChange(transacao)}
                     />
                 </div>
-                <AdicionarTransacao onAdicionar={(transacao) => setTransation([transacao, ...transation])} />
+                <div>
+                <FormNewTransaction onAdicionar={(transacao) => setTransation([transacao, ...transation])}>
+                    Nova Transação
+                </FormNewTransaction>
+                </div>
             </div>
             <ModalEditar
                 transacao={transacaoEditando}
                 onClose={() => setTransacaoEditando(null)}
-                onSalvar={handleSalvarEdicao} />
+                onSalvar={handleSalvarEdicao}> Editar Transação</ModalEditar>
         </div>
+        
     );
 }

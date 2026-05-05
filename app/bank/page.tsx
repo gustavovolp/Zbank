@@ -1,12 +1,10 @@
-import { Navegation } from "@/componentes/Navegation";
-import { MovimentacaoBancaria } from "@/componentes/MovimentacaoBancaria";
+import { MovimentacaoBancaria } from "@/componentes/ui/MovimentacaoBancaria";
 import { MockTransation } from "@/data/mock-data";
 
 const BankPage = () => {
   return (
     <div>
-      <div className="flex container mx-auto">
-        <Navegation />
+      <div className="flex mx-auto">
         <div className="container mx-auto items-center justify-center self-center">
           <main className="flex-col items-center  text-center min-h-screen">
             <MovimentacaoBancaria transations={ MockTransation } />
@@ -17,4 +15,4 @@ const BankPage = () => {
   );
 }
 
-export default BankPage;
+export default BankPage;  

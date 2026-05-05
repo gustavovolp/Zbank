@@ -1,6 +1,6 @@
 import { Transaction } from "@/types/transation";
-import { BotaoEditar } from '@/componentes/ButtonEdit';
-import { BotaoExcluir } from "@/componentes/ButtonDelete";
+import { BotaoEditar } from '@/componentes/button/ButtonEdit';
+import { BotaoExcluir } from "@/componentes/button/ButtonDelete";
 
 
 interface ListAccountStatement {
@@ -27,6 +27,7 @@ export const AccountStatement = ({ t, onChange, onDelete }: ListAccountStatement
                         className="w-full bg-transparent border-none outline-none"
                      />
                 </div>
+                <div className="gap-6 m-2">{t.data}</div>
                 <div className="flex gap-2 justify-end ml-auto">
                     <div className="cursor-pointer" onClick={() => onChange(t)}>
                         <BotaoEditar />

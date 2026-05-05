@@ -6,7 +6,7 @@ export const MockTransation: Transaction[] = [
     data: '2026-03-18',
     valor: 100,
     descricao: 'Pix da minha mãe',
-    tipo: 'tranferencia'
+    tipo: 'transferencia'
 }, {
     id: 1,
     data: '2026-03-19',
@@ -36,6 +36,6 @@ export const MockTransation: Transaction[] = [
     data: '2026-03-23',
     valor: 150,
     descricao: 'Freelance de design',
-    tipo: 'tranferencia'
+    tipo: 'transferencia'
 }
 ]
